@@ -1,6 +1,6 @@
 /**
  * ---------------------------------------------------------------------------
- * File name: Spear.java
+ * File name: EquipmentDriver.java
  * Project name: 1260Game
  * ---------------------------------------------------------------------------
  * Creator's name and email: Dylan Zelasko
@@ -13,17 +13,18 @@ package game;
 
 
 /**
- * Allows for creation of spear objects that extend weapon class
+ * Enter type purpose here
  *
  * <hr>
  * Date created: Oct 14, 2020
  * <hr>
  * @author Dylan Zelasko
  */
-public class Spear extends Weapon
+public class EquipmentDriver
 {
+
 	/**
-	 * Constructor for Spear object        
+	 * Enter method description here         
 	 *
 	 * <hr>
 	 * Date created: Oct 14, 2020
@@ -31,9 +32,10 @@ public class Spear extends Weapon
 	 * <hr>
 	 * @param args
 	 */
-	public Spear()
+	public static void main (String [ ] args)
 	{
-		new Weapon("Spear", 8,0,0,WeaponHandedness.TwoHanded);
-		Equipment.setPrice(135);
-	}//end Spear
-}//end Spear.java
+		// TODO Auto-generated method stub
+		
+	}
+
+}

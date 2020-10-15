@@ -1,94 +1,191 @@
+/**
+ * ---------------------------------------------------------------------------
+ * File name: Equipment.java
+ * Project name: 1260Game
+ * ---------------------------------------------------------------------------
+ * Creator's name and email: Dylan Zelasko, zelaskod@edu
+ * Course:  CSCI 1260
+ * Creation Date: Oct 14, 2020
+ * ---------------------------------------------------------------------------
+ */
+
+package game;
+
+
+/**
+ * Initializes attributes of and has methods to maintain
+ * a virtual piece of equipment to be managed by a driver class
+ *
+ * <hr>
+ * Date created: Oct 14, 2020
+ * <hr>
+ * @author Dylan Zelasko
+ */
+
 public class Equipment
 {
-    private String name;
-    private int price;
-    private double durability;
+	private static String name;
+	private static int price;
+	private static double durability;
 
-    public Equipment(String name, int price, double durability)
-    {
-        this.name = name;
-        this.price = price;
-        if(durability >=0 || durability <=1)
-        {
-            this.durability = durability;
-        }
-        else
-        {
-            this.durability = 0.0;
-        }
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-    public int getPrice()
-    {
-        return price;
-    }
-
-    public double getDurability()
-    {
-        return durability;
-
-    }
-    public String getDurabilityStatus()
-    {
-        String durabilityStatus = "";
-        if (durability >= .9)
-        {
-            durabilityStatus = "Great Condition";
-        }
-        else if (durability > .75)
-        {
-            durabilityStatus = "good condition";
-        }
-        else if (durability > .5)
-        {
-            durabilityStatus = "Fair Condition";
-        }
-        else if(durability > .3)
-        {
-            durabilityStatus = "Poor Condition";
-        }
-        else if (durability > 0)
-        {
-            durabilityStatus = "Almost Broken";
-        }
-        return durabilityStatus;
-    }
-
-    public void setName(String n)
-    {
-        name = n;
-    }
-
-    public void setPrice(int p)
-    {
-        price = p;
-    }
-
-    public void setDurability(double d)
-    {
-        if(d > 0 && d <= 1)
-        {
-            durability = d;
-        }
-    }
-    public int getSalePrice()
-    {
-        return (int) (price * (0.3 + durability));
-    }
-    public double adjustDurability(double d)
-    {
-        if(d <= 1 && d >=-1)
-        {
-            if((durability + d <= 1 || durability + d >= 0))
-            {
-                durability = +d;
-            }
-
-        }
-        return durability;
-    }
-}
+	/**
+	 * Parameterized constructor for equipment object        
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public Equipment(String newName, int newPrice, double newDurability)
+	{
+		name = newName;
+		price = newPrice;
+		durability = newDurability;
+	}//end Equipment
+	
+	/**
+	 * getter for equipment name       
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public static String getName()
+	{
+		return name;
+	}//end getName
+	
+	/**
+	 * getter for equipment price    
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public static int getPrice()
+	{
+		return price;	
+	}//end getPrice
+	
+	/**
+	 * getter for equipment durability        
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public static double getDurability()
+	{
+		return durability;
+	}//end getDurability
+	
+	/**
+	 * getter for Durability status determined by durability score        
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public String getDurabilityStatus()
+	{
+		String durabilityScore = "Almost Broken";
+		if(durability >= .3)
+			durabilityScore = "Poor Condition";
+		if(durability >= .5)
+			durabilityScore = "Fair Condition";
+		if(durability >= .7)
+			durabilityScore = "Good Condition";
+		if(durability >= .9)
+			durabilityScore = "Great Condition";
+		return durabilityScore;
+	}//end getDurabilityStatus
+	
+	/**
+	 * Setter for equipment name        
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public static void setName(String newName)
+	{
+		name = newName;
+	}//end setName
+	
+	/**
+	 * Setter for equipment price 
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public static void setPrice(int newPrice)
+	{
+		price = newPrice;
+	}//end setPrice
+	
+	/**
+	 * Setter for equipment durability       
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public void setDurability(double newDurability)
+	{
+		durability = newDurability;
+	}//end setDurability
+	
+	/**
+	 * generator and getter for equipment salePrice        
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public int getSalePrice()
+	{
+		int salePrice =  (int)(price * (.3 + durability));
+		return salePrice;	
+	}//end getSalePrice
+	
+	/**
+	 * transmuter for durability that ensures any change does not 
+	 * go against the max and min values of the attribute        
+	 *
+	 * <hr>
+	 * Date created: Oct 14, 2020
+	 *
+	 * <hr>
+	 * @param args
+	 */
+	public void adjustDurability(int adjustment)
+	{
+		if(adjustment <= 1 && adjustment >= -1)
+		{
+			if((durability + adjustment) > 1)
+				durability = 1;
+			if((durability + adjustment) < 0)
+				durability = 0;
+			else
+				durability += adjustment;
+		}//end if
+	}//end adjustDurability
+}//end Equipment.java
