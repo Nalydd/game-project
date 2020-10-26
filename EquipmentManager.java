@@ -220,6 +220,10 @@ public class EquipmentManager
 				swords.remove (index);
 			if(list == "spears")
 				spears.remove (index);
+			else
+			{
+				System.out.println("Please input a valid Equipment type from the following list:" + /n + "Plackarts, Helmets, LongBows, ThrowingAxes, Spears, Swords")
+			}
 		}//end removeEquipment
 		
 		/**
