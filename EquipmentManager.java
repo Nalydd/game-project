@@ -413,10 +413,38 @@ public class EquipmentManager
 	 * <hr>
 	 * @param args
 	 */
-	private void removeEquipment(ArrayList list, int index)
+	private void removeEquipment(String list, int index)
 	{
-		;
-	}//end removeEquipment
+		if (list.equalsIgnoreCase("Plackarts"))
+		{
+			plackarts.remove(index);
+		}
+		else if (list.equalsIgnoreCase("LongBows"))
+		{
+			longBows.remove(index);
+		}
+		else if (list.equalsIgnoreCase("Helmets"))
+		{
+			helmets.remove(index);
+		}
+		else if (list.equalsIgnoreCase(ThrowingAxes))
+		{
+			throwingAxes.remove(index);
+		}
+		else if (list.equalsIgnoreCase("Spears"))
+		{
+			spears.remove(index);
+		}
+		else if (list.equalsIgnoreCase("Swords"))
+		{
+			swords.remove(index);
+		}
+		else
+		{
+			System.out.println("Please input a valid Equipment type from the following list:/nPlackarts, Helmets, LongBows, ThrowingAxes, Spears, Swords")
+		}
+			//end removeEquipment
+
 	
 	/**
 	 * Enter method description here         
@@ -427,8 +455,36 @@ public class EquipmentManager
 	 * <hr>
 	 * @param args
 	 */
-	private void getEquipmentDetails(ArrayList list, int index)
+	private String getEquipmentDetails(String list, int index)
 	{
-		;
+		if (list.equalsIgnoreCase("Plackarts"))
+		{
+			return plackarts.get(index).toString();
+		}
+		else if (list.equalsIgnoreCase("LongBows"))
+		{
+			return longBows.get(index).toString();
+		}
+		else if (list.equalsIgnoreCase("Helmets"))
+		{
+			list = helmets.get(index).toString();
+		}
+		else if (list.equalsIgnoreCase(ThrowingAxes))
+		{
+			list = throwingAxes.get(index).toString();
+		}
+		else if (list.equalsIgnoreCase("Spears"))
+		{
+			list = spears.get(index).toString();
+		}
+		else if (list.equalsIgnoreCase("Swords"))
+		{
+			list = swords.get(index).toString();
+		}
+		else
+		{
+			System.out.println("Please input a valid Equipment type from the following list:/nPlackarts, Helmets, LongBows, ThrowingAxes, Spears, Swords")
+		}
+
 	}//end getEquipmentDetails
 }//end EquipmentManager.java
