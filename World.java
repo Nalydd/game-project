@@ -85,5 +85,13 @@ public class World {
 
     }
 
-    public boolean equipEquipment()
+    public boolean equipEquipment(eqmt Equipment)
+    {
+
+    }
+
+    public boolean useEquipment(eqmt Equipment, target Person)
+    {
+
+    }
 }
