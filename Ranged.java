@@ -6,10 +6,9 @@
  * Creator's name and email: Dylan Zelasko
  * Course:  CSCI 1260
  * Creation Date: Oct 14, 2020
+ * Contributors: Torrey Warren
  * ---------------------------------------------------------------------------
  */
-
-package game;
 
 
 /**
@@ -38,7 +37,7 @@ public class Ranged extends Weapon
 	 */
 	public Ranged(String name, int dmg, int ice, int fire, double rng, int max)
 	{
-		new Weapon(name, dmg, ice, fire, WeaponHandedness.TwoHanded);
+		super Weapon(name, dmg, ice, fire, WeaponHandedness.TwoHanded);
 		range = rng;
 		maxAmmo = max;
 		currentAmmo = maxAmmo;

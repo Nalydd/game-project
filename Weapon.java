@@ -6,10 +6,9 @@
  * Creator's name and email: Dylan Zelasko, zelaskod@etsu.edu
  * Course:  CSCI 1260
  * Creation Date: Oct 14, 2020
+ * Contributors: Dylan Colburn
  * ---------------------------------------------------------------------------
  */
-
-package game;
 
 
 /**
@@ -47,7 +46,7 @@ public class Weapon extends Equipment
 	 */
 	public Weapon(String name, int dmg, int ice, int fire, WeaponHandedness wp)
 	{
-		new Equipment(name, 75, .6);
+		super Equipment(name, 75, .6);
 		normalDamage = dmg;
 		iceDamage = ice;
 		fireDamage = fire;

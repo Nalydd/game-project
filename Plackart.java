@@ -6,10 +6,9 @@
  * Creator's name and email: Dylan Zelasko
  * Course:  CSCI 1260
  * Creation Date: Oct 14, 2020
+ * Contributors: Dylan Shaffer
  * ---------------------------------------------------------------------------
  */
-
-package game;
 
 
 /**
@@ -33,7 +32,7 @@ public class Plackart extends Armor
 	 */
 	Plackart()
 	{
-		new Armor(4, false, true);
+		super Armor(4, false, true);
 		Equipment.setName("Plackart");
 	}//end Plackart
 }//end Plackart.java

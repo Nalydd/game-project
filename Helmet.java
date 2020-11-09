@@ -9,8 +9,6 @@
  * ---------------------------------------------------------------------------
  */
 
-package game;
-
 
 /**
  * Allows user to create Helmet objects that extend Armor class
@@ -33,7 +31,7 @@ public class Helmet extends Armor
 	 */
 	Helmet()
 	{
-		new Armor(1, false, false);
+		super Armor(1, false, false);
 		Equipment.setName("Helmet");
 	}//end Helmet
 }//end Helmet.java

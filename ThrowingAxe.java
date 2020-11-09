@@ -6,10 +6,9 @@
  * Creator's name and email: Dylan Zelasko
  * Course:  CSCI 1260
  * Creation Date: Oct 14, 2020
+ * Contributors: Dylan Shaffer
  * ---------------------------------------------------------------------------
  */
-
-package game;
 
 
 /**
@@ -33,7 +32,7 @@ public class ThrowingAxe extends Ranged
 	 */
 	public ThrowingAxe()
 	{
-		new Ranged("Throwing Axe", 8, 0, 0, 30, 15 );
+		super Ranged("Throwing Axe", 8, 0, 0, 30, 15 );
 		addAmmo(-12);
 		setPrice(125);
 		setWeaponHandedness(WeaponHandedness.OneHanded);
