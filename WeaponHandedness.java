@@ -9,9 +9,6 @@
  * ---------------------------------------------------------------------------
  */
 
-package game;
-
-
 /**
  * Enumerated data type for how many hands is needed
  * to wield a weapon

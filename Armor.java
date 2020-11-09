@@ -1,5 +1,3 @@
-package game;
-
 /**
  * Creates a base armor object to be inherited and modified
  * by other classes in the package
@@ -8,6 +6,7 @@ package game;
  * Date created: Oct 14, 2020
  * <hr>
  * @author Dylan Zelasko
+ * Contributors: Seth Gilstrap
  */
 public class Armor extends Equipment
 {
@@ -27,7 +26,7 @@ public class Armor extends Equipment
 	 */
 	public Armor(int newArmorBonus, boolean ice, boolean fire)
 	{
-		new Equipment("Armor", 150, .8);
+		super Equipment("Armor", 150, .8);
 		armorBonus = newArmorBonus;
 		iceProtection = ice;
 		fireProtection = fire;

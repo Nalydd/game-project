@@ -9,8 +9,6 @@
  * ---------------------------------------------------------------------------
  */
 
-package game;
-
 
 /**
  * Allows user to create LongBow objects that extend Ranged class
@@ -33,7 +31,7 @@ public class LongBow extends Ranged
 	 */
 	public LongBow()
 	{
-		new Ranged("LongBow", 5, 0 ,0, 150, 100);
+		super Ranged("LongBow", 5, 0 ,0, 150, 100);
 		addAmmo(-50);
 		setPrice(85);
 	}//end LongBow

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 				switch (s)
 				{
 					case "clear all":
-						clearAll();
+						EquipmentManager.clearAll();
 						break;
 					case "count equipment":
 						countEquipment();

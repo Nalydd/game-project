@@ -6,10 +6,9 @@
  * Creator's name and email: Dylan Zelasko, zelaskod@edu
  * Course:  CSCI 1260
  * Creation Date: Oct 14, 2020
+ * Contributors: Dylan Shaffer
  * ---------------------------------------------------------------------------
  */
-
-package game;
 
 
 /**

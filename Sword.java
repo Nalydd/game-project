@@ -6,10 +6,9 @@
  * Creator's name and email: Dylan Zelasko
  * Course:  CSCI 1260
  * Creation Date: Oct 14, 2020
+ * Contributors: Dylan Shaffer
  * ---------------------------------------------------------------------------
  */
-
-package game;
 
 
 /**
@@ -33,6 +32,6 @@ public class Sword extends Weapon
 	 */
 	public Sword()
 	{
-		new Weapon("Sword", 5,0,0,WeaponHandedness.Versatile);
+		super Weapon("Sword", 5,0,0,WeaponHandedness.Versatile);
 	}//end Sword
 }//end Sword.java
